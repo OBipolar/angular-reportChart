@@ -8,10 +8,15 @@
  * Controller of the angularReportChartApp
  */
 angular.module('angularReportChartApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $http) {
+
+        $http.get('lineChartData.json').success(function(data) {
+          $scope.lineChartData = data ;
+        });
+
+            $scope.xAxisTickFormatFunction = function() {
+                return function(d) {
+            return d3.time.format('%x')(new Date(d));
+          };
+              };
   });

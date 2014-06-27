@@ -16,6 +16,18 @@
           <p>游戏</p>
         </div>
         <img class="graph" src="images\graph1.svg">
+
+        <nvd3-stacked-area-chart
+                    data="lineChartData"
+                    id="line-chart"
+                    showXAxis="true"
+                    showYAxis="true"
+                    tooltips="true"
+                    xAxisTickFormat="xAxisTickFormatFunction()"
+                    interactive="true">
+                    <svg></svg>
+        </nvd3-line-chart>
+
       </div>
       <div class="row">
         <div class="col-3 vertical-border">

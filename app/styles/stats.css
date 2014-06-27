@@ -1,0 +1,25 @@
+#bar1,#bar2{
+	height: 200px;
+}
+#bar1-desc,#bar2-desc{
+	height: 130px;
+}
+#legend2-1,#legend2-2{
+	float: left;
+}
+/*以下是宽度数据*/
+#bar1-1{
+	width: 100%;
+}
+#bar1-2{
+	width: 80%;
+}
+#bar1-3{
+	width: 30%;
+}
+#bar1-4{
+	width: 10%;
+}
+#bar1-5{
+	width: 5%;
+}

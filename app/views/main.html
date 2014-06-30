@@ -11,20 +11,18 @@
 
         <nvd3-stacked-area-chart
                     data="influxData"
-                    id="line-chart"
+                    id="stack-chart"
                     showXAxis="true"
                     showYAxis="true"
                     showLegend="true"
                     width="940"
-                    height="296"
+                    height="360"
                     xAxisTickFormat="xAxisTickFormatFunction()"
                     yAxisTickFormat="yAxisTickFormatFunction()"
-                    interactive="true"
                     color="colorFunction()"
                     legendColor="colorFunction()"
-                    useInteractiveGuideline="true"
                     transitionDuration="500"
-                    margin="{top: 0, right: 0, bottom: 30, left: 50}">
+                    margin="{top: 0, right: 0, bottom: 10, left: 40}">
                     <svg></svg>
         </nvd3-line-chart>
 
@@ -151,7 +149,18 @@
       <div class="row">
         <div class="col-3 vertical-border">
           <h2>公司流量分布</h2>
-          <img class="radar" src="images\circle.svg">
+
+              <nvd3-pie-chart
+                    data="pieChartData"
+                    id="pie-chart"
+                    x="xFunction()"
+                    y="yFunction()"
+                    color="colorFunction()"
+                    donut="true"
+                    margin="{top: 0, right: 0, bottom: 0, left: 0}">
+                    <svg></svg>
+              </nvd3-pie-chart>
+
         </div>
         <div class="col-9 vertical-border-right">
           <div style="float:left;width:100%">
@@ -187,11 +196,6 @@
             <h3>Gb</h3>
           </div>
           <div class="big-number circle-stat">
-            <h2>IM</h2>
-            <p>120</p>
-            <h3>Gb</h3>
-          </div>
-          <div class="big-number circle-stat">
             <h2>视频</h2>
             <p>220</p>
             <h3>Gb</h3>
@@ -201,11 +205,22 @@
             <p>300</p>
             <h3>Gb</h3>
           </div>
+          <div class="big-number circle-stat">
+            <h2>IM</h2>
+            <p>120</p>
+            <h3>Gb</h3>
+          </div>
         </div>
               <div class="row">
+
         <div class="col-3 vertical-border">
           <h2>公司流量分布</h2>
-          <img class="radar" src="images\radar.svg">
+
+          <div width="100" height="100">
+            <radar-chart val="radarChartData">
+            </radar-chart>
+          </div>
+
         </div>
         <div class="col-9 vertical-border-right">
           <div style="float:left;width:100%">

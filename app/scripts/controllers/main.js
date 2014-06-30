@@ -16,6 +16,15 @@ angular.module('angularReportChartApp')
           $scope.influxData = data ;
         });
 
+        $http.get('pieChartData.json').success(function(data) {
+          $scope.pieChartData = data ;
+        });
+
+        $http.get('radarChartData.json').success(function(data) {
+          $scope.radarChartData = data ;
+          console.log($scope.radarChartData.length);
+        });
+
         $scope.xAxisTickFormatFunction = function() {
                 return function(d) {
                   return d3.time.format('%d')(new Date(d));
@@ -26,7 +35,20 @@ angular.module('angularReportChartApp')
                 return function(d) {
                   return d3.format(',.1f')(d);
                 };
+              };
+
+        $scope.xFunction = function() {
+          return function(d) {
+            return d.key;
+          };
         };
+
+        $scope.yFunction = function() {
+          return function(d) {
+            return d.y;
+          };
+        };
+
 
         $scope.colorFunction = function() {
                 return function(d, i) {

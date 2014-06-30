@@ -18,15 +18,15 @@ angular.module('angularReportChartApp')
 
         $scope.xAxisTickFormatFunction = function() {
                 return function(d) {
-                  return d3.time.format('%a %d')(new Date(d));
+                  return d3.time.format('%d')(new Date(d));
                 };
               };
 
-        $scope.xAxisScaleFunction = function() {
+        $scope.yAxisTickFormatFunction = function() {
                 return function(d) {
-                  return d3.svg.axis().ticks(d3.time.days, 2);
+                  return d3.format(',.1f')(d);
                 };
-              };
+        };
 
         $scope.colorFunction = function() {
                 return function(d, i) {

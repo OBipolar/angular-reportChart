@@ -1010,7 +1010,7 @@
           '$attrs',
           function ( $scope, $element, $attrs ) {
             $scope.d3Call = function ( data, chart ) {
-              checkElementID( $scope, $attrs, $element, chart, data );
+              checkElementID( $scopee, $attrs, $element, chart, data );
             };
           }
         ],

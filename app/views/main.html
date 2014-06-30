@@ -7,29 +7,24 @@
       </div>
       <div class="col-12">
         <h2>流量-时间图表</h2>
-        <div class="graph-legend" id="legend1-1">
-          <div class="legend-circle"></div>
-          <p>游戏</p>
-        </div>
-        <div class="graph-legend" id="legend1-2">
-          <div class="legend-circle"></div>
-          <p>游戏</p>
-        </div>
-        <img class="graph" src="images\graph1.svg">
+
 
         <nvd3-stacked-area-chart
                     data="influxData"
                     id="line-chart"
                     showXAxis="true"
                     showYAxis="true"
-                    showControls="true"
                     showLegend="true"
                     width="940"
                     height="296"
                     xAxisTickFormat="xAxisTickFormatFunction()"
+                    yAxisTickFormat="yAxisTickFormatFunction()"
                     interactive="true"
                     color="colorFunction()"
-                    legendColor="colorFunction()">
+                    legendColor="colorFunction()"
+                    useInteractiveGuideline="true"
+                    transitionDuration="500"
+                    margin="{top: 0, right: 0, bottom: 30, left: 50}">
                     <svg></svg>
         </nvd3-line-chart>
 

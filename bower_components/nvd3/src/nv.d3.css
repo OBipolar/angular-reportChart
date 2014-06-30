@@ -490,7 +490,7 @@ svg .title {
 */
 
 .nvd3.nv-stackedarea path.nv-area {
-  fill-opacity: .7;
+  fill-opacity: .4;
   /*
   stroke-opacity: .65;
   fill-opacity: 1;

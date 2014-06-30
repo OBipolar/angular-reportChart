@@ -18,13 +18,18 @@
         <img class="graph" src="images\graph1.svg">
 
         <nvd3-stacked-area-chart
-                    data="lineChartData"
+                    data="influxData"
                     id="line-chart"
                     showXAxis="true"
                     showYAxis="true"
                     tooltips="true"
+                    showControls="true"
+                    showLegend="true"
+                    width="940"
+                    height="296"
                     xAxisTickFormat="xAxisTickFormatFunction()"
-                    interactive="true">
+                    interactive="true"
+                    color="colorFunction()">
                     <svg></svg>
         </nvd3-line-chart>
 

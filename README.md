@@ -1,7 +1,6 @@
 ### TBD
 * change text color
-* Y-tick format kb,mb or gb?
+* Y-tick format kb,mb or gb? automatic detect
 * pie-chart details
-* radar-chart details
 * interface for data influx
-* manual legend for pie and radar chart
+* change the lower bottom part into 5 radar chart

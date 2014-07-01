@@ -1,7 +1,7 @@
 (function() {
     'use strict';  angular.module('angular-radar', []).directive('radarChart', function () {
         var colorFunction = function(i) {
-            var colorArray = ['#a00041'];
+            var colorArray = ['#3668A4'];
                 return colorArray[i];
         }
         var initConfig = {
@@ -10,7 +10,7 @@
              levels: 3,
              maxValue: 0,
              radians: 2 * Math.PI,
-             opacityArea: .8,
+             opacityArea: .7,
              color: colorFunction,
              fontSize: 12
         };
@@ -58,10 +58,10 @@
                    .attr("x2", function(d, i){return getHorizontalPosition(i+1, levelFactor);})
                    .attr("y2", function(d, i){return getVerticalPosition(i+1, levelFactor);});
                 if(j===initConfig.levels-1){
-                   drawBasic.attr("class", "line").style("stroke", "#555").attr("transform", "translate(" + (initConfig.w/2-levelFactor) + ", " + (initConfig.h/2-levelFactor) + ")");
+                   drawBasic.attr("class", "line").style("stroke", "#fff").attr("transform", "translate(" + (initConfig.w/2-levelFactor) + ", " + (initConfig.h/2-levelFactor) + ")");
                 }
                 else{
-                   drawBasic.attr("class", "line").style("stroke", "#555").style("stroke-dasharray", ("3, 3")).attr("transform", "translate(" + (initConfig.w/2-levelFactor) + ", " + (initConfig.h/2-levelFactor) + ")");
+                   drawBasic.attr("class", "line").style("stroke", "#fff").style("stroke-dasharray", ("3, 3")).attr("transform", "translate(" + (initConfig.w/2-levelFactor) + ", " + (initConfig.h/2-levelFactor) + ")");
                 }
               }
 
@@ -70,7 +70,7 @@
               axis.append("text").attr("class", "legend")
                   .text(function(d){return d})
                   .style("font-family", "Verdana").style("font-size", initConfig.fontSize + "px")
-                  .style("fill","#555")
+                  .style("fill","#FFF")
                   .style("text-anchor", "middle")
                   .attr("transform", function(d, i){
                     var p = getVerticalPosition(i, initConfig.h / 2);
@@ -108,7 +108,7 @@
                    .on('mouseover', function (d){
                                       var z = "polygon."+d3.select(this).attr("class");
                                       gRadar.selectAll("polygon").transition(200).style("fill-opacity", 0.1);
-                                      gRadar.selectAll(z).transition(200).style("fill-opacity", .7);
+                                      gRadar.selectAll(z).transition(200).style("fill-opacity", .9);
                                     })
                    .on('mouseout', function(){
                                       gRadar.selectAll("polygon").transition(200).style("fill-opacity", initConfig.opacityArea);

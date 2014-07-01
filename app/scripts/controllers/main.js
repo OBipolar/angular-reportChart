@@ -11,6 +11,7 @@ angular.module('angularReportChartApp')
   .controller('MainCtrl', function ($scope, $http) {
 
         var colorArray = ['#389C75', '#FEFEFE', '#DFD122', '#3668A4', '#753790'];
+        var unitArray = ['', 'k', 'M', 'G', 'T', ''];
 
         $http.get('lineChartData.json').success(function(data) {
           $scope.influxData = data ;
@@ -33,7 +34,12 @@ angular.module('angularReportChartApp')
 
         $scope.yAxisTickFormatFunction = function() {
                 return function(d) {
-                  return d3.format(',.1f')(d);
+                  var i=0;
+                  while(d>1024) {
+                    i++;
+                    d = d/1024;
+                  }
+                  return (d3.format('.1f')(d)+ ' ' + unitArray[i]);
                 };
               };
 

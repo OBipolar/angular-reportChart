@@ -2,7 +2,7 @@
     'use strict';  angular.module('angular-radar', []).directive('radarChart', function () {
         var colorFunction = function(i) {
             var colorArray = ['#389C75', '#FEFEFE', '#DFD122', '#3668A4', '#753790'];
-                return colorArray[i];
+                return colorArray[2];
         }
         var initConfig = {
              factor: .7,

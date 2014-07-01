@@ -9,14 +9,9 @@
  */
 angular.module('angularReportChartApp')
   .controller('MainCtrl', function ($scope, $http) {
-        $scope.Init = {};
-        $scope.Init.func = function(i) {
-            var colorArray = ['#389C75', '#FEFEFE', '#DFD122', '#3668A4', '#753790'];
-                return colorArray[i];
-        };
 
         var colorArray = ['#389C75', '#FEFEFE', '#DFD122', '#3668A4', '#753790'];
-        var unitArray = ['', 'k', 'M', 'G', 'T', ''];
+        var unitArray = ['', 'k', 'M', 'G', 'T', 'P'];
 
         $http.get('lineChartData.json').success(function(data) {
           $scope.influxData = data ;

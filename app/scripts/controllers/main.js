@@ -22,7 +22,6 @@ angular.module('angularReportChartApp')
 
         $http.get('radarChartData.json').success(function(data) {
           $scope.radarChartData = data ;
-          console.log($scope.radarChartData.length);
         });
 
         $scope.xAxisTickFormatFunction = function() {

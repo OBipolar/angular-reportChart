@@ -339,13 +339,13 @@ svg .title {
 }
 
 .nvd3.nv-pie path {
-  stroke: #fff;
-  stroke-width: 1px;
+  stroke: #83c0d8;
+  stroke-width: 1.5px;
   stroke-opacity: 1;
 }
 
 .nvd3.nv-pie .hover path {
-  fill-opacity: .7;
+  fill-opacity: .4;
 }
 .nvd3.nv-pie .nv-label {
   pointer-events: none;
@@ -490,7 +490,7 @@ svg .title {
 */
 
 .nvd3.nv-stackedarea path.nv-area {
-  fill-opacity: .4;
+  fill-opacity: .6;
   /*
   stroke-opacity: .65;
   fill-opacity: 1;

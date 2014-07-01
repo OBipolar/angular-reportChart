@@ -163,53 +163,20 @@
 
         </div>
         <div class="col-9 vertical-border-right">
+
           <div style="float:left;width:100%">
-            <div class="graph-legend" id="legend2-1">
+            <div class="graph-legend" ng-repeat="item in radarChartData" id="legend2-2">
               <div class="legend-circle"></div>
-              <p>游戏</p>
-            </div>
-            <div class="graph-legend" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>游戏</p>
-            </div>
-            <div class="graph-legend" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>游戏</p>
-            </div>
-            <div class="graph-legend" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>游戏</p>
-            </div>
-            <div class="graph-legend" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>游戏</p>
+              <p>{{item.axis}}</p>
             </div>
           </div>
-          <div class="big-number circle-stat">
-            <h2>游戏</h2>
-            <p>400</p>
-            <h3>Gb</h3>
-          </div>
-          <div class="big-number circle-stat">
-            <h2>社交</h2>
-            <p>520</p>
-            <h3>Gb</h3>
-          </div>
-          <div class="big-number circle-stat">
-            <h2>视频</h2>
-            <p>220</p>
-            <h3>Gb</h3>
-          </div>
-          <div class="big-number circle-stat">
-            <h2>网页</h2>
-            <p>300</p>
-            <h3>Gb</h3>
-          </div>
-          <div class="big-number circle-stat">
-            <h2>IM</h2>
-            <p>120</p>
-            <h3>Gb</h3>
-          </div>
+
+       <div class="big-number circle-stat" ng-repeat="item in radarChartData">
+          <h2>{{item.axis}}</h2>
+          <p>{{item.value}}</p>
+          <h3>Gb</h3>
+        </div>
+
         </div>
               <div class="row">
 
@@ -224,52 +191,18 @@
         </div>
         <div class="col-9 vertical-border-right">
           <div style="float:left;width:100%">
-            <div class="graph-legend" id="legend2-1">
+              <div class="graph-legend" ng-repeat="item in radarChartData" id="legend2-2">
               <div class="legend-circle"></div>
-              <p>游戏</p>
-            </div>
-            <div class="graph-legend" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>游戏</p>
-            </div>
-            <div class="graph-legend" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>游戏</p>
-            </div>
-            <div class="graph-legend" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>游戏</p>
-            </div>
-            <div class="graph-legend" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>游戏</p>
+              <p>{{item.axis}}</p>
             </div>
           </div>
-          <div class="big-number circle-stat">
-            <h2>游戏</h2>
-            <p>400</p>
-            <h3>Gb</h3>
-          </div>
-          <div class="big-number circle-stat">
-            <h2>社交</h2>
-            <p>520</p>
-            <h3>Gb</h3>
-          </div>
-          <div class="big-number circle-stat">
-            <h2>IM</h2>
-            <p>120</p>
-            <h3>Gb</h3>
-          </div>
-          <div class="big-number circle-stat">
-            <h2>视频</h2>
-            <p>220</p>
-            <h3>Gb</h3>
-          </div>
-          <div class="big-number circle-stat">
-            <h2>网页</h2>
-            <p>300</p>
-            <h3>Gb</h3>
-          </div>
+
+        <div class="big-number circle-stat" ng-repeat="item in radarChartData">
+          <h2>{{item.axis}}</h2>
+          <p>{{item.value}}</p>
+          <h3>Gb</h3>
+        </div>
+
         </div>
       </div>
     </div>

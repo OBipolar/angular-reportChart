@@ -20,9 +20,18 @@ angular.module('angularReportChartApp')
           $scope.pieChartData = data ;
         });
 
-        $http.get('radarChartData.json').success(function(data) {
-          $scope.radarChartData = data ;
-        });
+        // $http.get('radarChartData.json').success(function(data) {
+        //   $scope.radarChartData = data ;
+        // });
+
+        $scope.radarChartData = [[
+    { axis: '游戏', value: 400},
+     { axis: '社交', value: 520},
+     { axis: '视频', value: 220},
+     { axis: '网页', value: 300},
+      { axis: 'IM', value: 120}
+]];
+
 
         $scope.xAxisTickFormatFunction = function() {
                 return function(d) {

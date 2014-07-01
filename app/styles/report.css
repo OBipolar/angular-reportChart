@@ -94,11 +94,43 @@ h2{
 	margin: 10px 0;
 	float: right;
 }
-.legend-circle{
+.legend-circle-0{
 	width: 20px;
 	height: 20px;
 	border-radius: 10px;
-	background-color: #749bbd;
+	background-color: #389C75;
+	float: left;
+	margin-right: 10px;
+}
+.legend-circle-1{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: #FEFEFE;
+	float: left;
+	margin-right: 10px;
+}
+.legend-circle-2{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: #DFD122;
+	float: left;
+	margin-right: 10px;
+}
+.legend-circle-3{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: #3668A4;
+	float: left;
+	margin-right: 10px;
+}
+.legend-circle-4{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: #753790;
 	float: left;
 	margin-right: 10px;
 }

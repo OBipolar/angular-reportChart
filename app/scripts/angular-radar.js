@@ -24,10 +24,10 @@
           },
         link: function (scope, element, attrs) {
             var margin = {
-              left: 0,
-              top: 0,
-              bottom: 0,
-              right: 0
+              left: 5,
+              top: 5,
+              bottom: 5,
+              right: 5
             };
             scope.render = function(data) {
 

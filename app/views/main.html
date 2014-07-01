@@ -165,17 +165,18 @@
         <div class="col-9 vertical-border-right">
 
           <div style="float:left;width:100%">
-            <div class="graph-legend" ng-repeat="item in radarChartData" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>{{item.axis}}</p>
+              <div class="graph-legend" ng-repeat="item in pieChartData" id="legend2-2">
+              <div class="legend-circle-{{item.id}}"></div>
+              <p>{{item.key}}</p>
             </div>
           </div>
 
-       <div class="big-number circle-stat" ng-repeat="item in radarChartData">
-          <h2>{{item.axis}}</h2>
-          <p>{{item.value}}</p>
+        <div class="big-number circle-stat" ng-repeat="item in pieChartData">
+          <h2>{{item.key}}</h2>
+          <p>{{item.y}}</p>
           <h3>Gb</h3>
         </div>
+
 
         </div>
               <div class="row">
@@ -183,7 +184,7 @@
         <div class="col-3 vertical-border">
           <h2>公司流量分布</h2>
 
-          <div width="100" height="100">
+          <div style="height:180px;">
             <radar-chart val="radarChartData">
             </radar-chart>
           </div>
@@ -191,15 +192,15 @@
         </div>
         <div class="col-9 vertical-border-right">
           <div style="float:left;width:100%">
-              <div class="graph-legend" ng-repeat="item in radarChartData" id="legend2-2">
-              <div class="legend-circle"></div>
-              <p>{{item.axis}}</p>
+              <div class="graph-legend" ng-repeat="item in pieChartData" id="legend2-2">
+              <div class="legend-circle-{{item.id}}"></div>
+              <p>{{item.key}}</p>
             </div>
           </div>
 
-        <div class="big-number circle-stat" ng-repeat="item in radarChartData">
-          <h2>{{item.axis}}</h2>
-          <p>{{item.value}}</p>
+        <div class="big-number circle-stat" ng-repeat="item in pieChartData">
+          <h2>{{item.key}}</h2>
+          <p>{{item.y}}</p>
           <h3>Gb</h3>
         </div>
 

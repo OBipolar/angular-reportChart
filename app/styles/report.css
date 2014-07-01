@@ -29,7 +29,7 @@ h2{
 }
 .page{
 	width: 980px;
-	height:1430px;
+	height:1460px;
 	min-height: 900px;
 	margin: auto;
 	margin-top: 40px;
@@ -91,6 +91,11 @@ h2{
 }
 .graph-legend{
 	width: 80px;
+	margin: 10px 0;
+	float: right;
+}
+.wide{
+	width: 115px;
 	margin: 10px 0;
 	float: right;
 }

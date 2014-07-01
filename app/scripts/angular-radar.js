@@ -1,7 +1,7 @@
 (function() {
     'use strict';  angular.module('angular-radar', []).directive('radarChart', function () {
         var colorFunction = function(i) {
-            var colorArray = ['#3668A4'];
+            var colorArray = ['#389C75', '#FEFEFE', '#DFD122', '#3668A4', '#753790'];
                 return colorArray[i];
         }
         var initConfig = {
@@ -11,7 +11,7 @@
              maxValue: 0,
              radians: 2 * Math.PI,
              opacityArea: .7,
-             color: colorFunction,
+             color:colorFunction,
              fontSize: 12
         };
         return {
@@ -20,7 +20,8 @@
             val: '=',
             width: '=',
             height: '=',
-            levels: '='
+            levels: '=',
+            initcolor: '='
           },
         link: function (scope, element, attrs) {
             var margin = {
@@ -30,7 +31,7 @@
               right: 5
             };
             scope.render = function(data) {
-
+              initConfig.color = colorFunction;
               initConfig.h = element[ 0 ].parentElement.offsetHeight - ( margin.top + margin.bottom );
               initConfig.w = initConfig.h;
               initConfig.maxValue = Math.max(d3.max(data, function(i){return d3.max(i.map(function(o){return o.value*1.1;}))}));

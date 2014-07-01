@@ -9,6 +9,11 @@
  */
 angular.module('angularReportChartApp')
   .controller('MainCtrl', function ($scope, $http) {
+        $scope.Init = {};
+        $scope.Init.func = function(i) {
+            var colorArray = ['#389C75', '#FEFEFE', '#DFD122', '#3668A4', '#753790'];
+                return colorArray[i];
+        };
 
         var colorArray = ['#389C75', '#FEFEFE', '#DFD122', '#3668A4', '#753790'];
         var unitArray = ['', 'k', 'M', 'G', 'T', ''];
@@ -23,7 +28,14 @@ angular.module('angularReportChartApp')
 
         $http.get('radarChartData.json').success(function(data) {
           $scope.radarChartData = data;
-          console.log($scope.radarChartData);
+        });
+
+        $http.get('ipData.json').success(function(data) {
+          $scope.ipData = data;
+        });
+
+        $http.get('appData.json').success(function(data) {
+          $scope.appData = data;
         });
 
         $scope.xAxisTickFormatFunction = function() {

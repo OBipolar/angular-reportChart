@@ -70,10 +70,8 @@ angular.module('angularReportChartApp')
               };
 
         $scope.radarColorFunction = function(data) {
-            return function() {
                 var colorArray = ['#389C75', '#FEFEFE', '#DFD122', '#3668A4', '#753790'];
                 return colorArray[data];
-            };
         };
 
 

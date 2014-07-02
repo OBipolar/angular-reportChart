@@ -11,7 +11,7 @@
              maxValue: 0,
              radians: 2 * Math.PI,
              opacityArea: .7,
-             // color:initcolor,
+             // color: colorFunction,
              fontSize: 12
         };
         return {
@@ -104,7 +104,7 @@
                        }
                        return str;
                     })
-                   .style("fill", function(j, i){return initConfig.color(series)})
+                   .style("fill", function(j, i){return initConfig.color})
                    .style("fill-opacity", initConfig.opacityArea)
                    .on('mouseover', function (d){
                                       var z = "polygon."+d3.select(this).attr("class");

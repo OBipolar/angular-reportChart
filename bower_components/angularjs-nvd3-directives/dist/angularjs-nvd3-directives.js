@@ -152,7 +152,7 @@
           scope.$watch( 'data', function ( data ) {
             if ( data ) {
               if ( scope.chart ) {
-                return d3.select( '#' + attrs.id + ' svg' ).attr( 'height', height ).attr( 'width', width ).datum( data ).transition().duration( 250 ).call( scope.chart );
+                return d3.select( '#' + attrs.id + ' svg' ).attr( 'height', height ).attr( 'width', width ).datum( data ).transition().duration( 0 ).call( scope.chart );
               }
               margin = scope.$eval( attrs.margin ) || {
                 top: 5,
@@ -182,7 +182,7 @@
                   if ( !d3.select( '#' + attrs.id + ' svg' )[ 0 ][ 0 ] ) {
                     d3.select( '#' + attrs.id ).append( 'svg' );
                   }
-                  d3.select( '#' + attrs.id + ' svg' ).attr( 'height', height ).attr( 'width', width ).datum( data ).transition().duration( 250 ).call( chart );
+                  d3.select( '#' + attrs.id + ' svg' ).attr( 'height', height ).attr( 'width', width ).datum( data ).transition().duration( 0 ).call( chart );
                   nv.utils.windowResize( chart.update );
                   scope.chart = chart;
                   return chart;
@@ -781,9 +781,9 @@
       angular.element( element ).attr( 'data-chartid', dataAttributeChartID );
       //if an id is not supplied, create a random id.
       if ( d3.select( '[data-chartid=' + dataAttributeChartID + '] svg' ).empty() ) {
-        d3.select( '[data-chartid=' + dataAttributeChartID + ']' ).append( 'svg' ).attr( 'height', scope.height ).attr( 'width', scope.width ).datum( data ).transition().duration( attrs.transitionduration === undefined ? 250 : +attrs.transitionduration ).call( chart );
+        d3.select( '[data-chartid=' + dataAttributeChartID + ']' ).append( 'svg' ).attr( 'height', scope.height ).attr( 'width', scope.width ).datum( data ).transition().duration( 0 ).call( chart );
       } else {
-        d3.select( '[data-chartid=' + dataAttributeChartID + '] svg' ).attr( 'height', scope.height ).attr( 'width', scope.width ).datum( data ).transition().duration( attrs.transitionduration === undefined ? 250 : +attrs.transitionduration ).call( chart );
+        d3.select( '[data-chartid=' + dataAttributeChartID + '] svg' ).attr( 'height', scope.height ).attr( 'width', scope.width ).datum( data ).transition().duration( 0).call( chart );
       }
     } else {
       if ( angular.isArray( data ) && data.length === 0 ) {
@@ -792,7 +792,7 @@
       if ( d3.select( '#' + attrs.id + ' svg' ).empty() ) {
         d3.select( '#' + attrs.id ).append( 'svg' );
       }
-      d3.select( '#' + attrs.id + ' svg' ).attr( 'height', scope.height ).attr( 'width', scope.width ).datum( data ).transition().duration( attrs.transitionduration === undefined ? 250 : +attrs.transitionduration ).call( chart );
+      d3.select( '#' + attrs.id + ' svg' ).attr( 'height', scope.height ).attr( 'width', scope.width ).datum( data ).transition().duration(0 ).call( chart );
     }
   }
   angular.module( 'nvd3ChartDirectives', [] ).directive( 'nvd3LineChart', [
@@ -2537,7 +2537,7 @@
                 ];
                 bandLines = sLineSelection.selectAll( '.nv-bandline' ).data( [ bandlineData ] );
                 bandLines.enter().append( 'g' ).attr( 'class', 'nv-bandline' );
-                selectedChart.transition().duration( $attrs.transitionduration === undefined ? 250 : +$attrs.transitionduration ).call( chart );
+                selectedChart.transition().duration( 0 ).call( chart );
               } else {
                 if ( !d3.select( '#' + $attrs.id + ' svg' ) ) {
                   d3.select( '#' + $attrs.id ).append( 'svg' );
@@ -2554,7 +2554,7 @@
                 ];
                 bandLines = sLineSelection.selectAll( '.nv-bandline' ).data( [ bandlineData ] );
                 bandLines.enter().append( 'g' ).attr( 'class', 'nv-bandline' );
-                selectedChart.transition().duration( $attrs.transitionduration === undefined ? 250 : +$attrs.transitionduration ).call( chart );
+                selectedChart.transition().duration( 0 ).call( chart );
               }
             };
           }

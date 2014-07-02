@@ -170,7 +170,7 @@
 
         <div class="big-number circle-stat" ng-repeat="item in ipData">
           <div style="height:140px;">
-            <radar-chart val="item.content">
+            <radar-chart val="item.content" initcolor="radarColorFunction(item.id)">
             </radar-chart>
           </div>
         </div>
@@ -178,3 +178,4 @@
         </div>
       </div>
     </div>
+  </div>

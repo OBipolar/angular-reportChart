@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "app": "迅雷",
+        "description": "迅雷是迅雷公司开发的互联网下载软件。迅雷是一款基于多资源超线程技术的下载软件，作为“宽带时期的下载工具”，迅雷针对宽带用户做了优化，并同时推出了“智能下载”的服务。 2014年3月6日，有消息称迅雷将引入小米超2亿美金投资。 2014年4月4日消息，迅雷已完成新一轮3.1亿美元融资，其中小米领投2亿美元，金山软件投资9000万美元，迅雷的原投资方晨兴创投和IDG跟投2000万美元。"
+        },
+    {
+        "id": 1,
+        "app": "QQ旋风",
+        "description": "Xuanfeng description"
+        },
+    {
+        "id": 2,
+        "app": "爱奇艺",
+        "description": "Iqiyi description"
+        },
+    {
+        "id": 3,
+        "app": "QQ",
+        "description": "qq description"
+        },
+    {
+        "id": 4,
+        "app": "微博",
+        "description": "Weibo description"
+    }
+]

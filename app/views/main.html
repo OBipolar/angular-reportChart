@@ -75,7 +75,7 @@
             <img src="images\up.svg">
           </div>
           <div class="ranking-bar">
-            <div class='progress-bar' ng-repeat="item in ipData">
+            <div class='progress-bar' ng-repeat="item in ipData track by $index">
               <div id="bar1-{{item.id+1}}"></div>
               <p>{{item.IP}}</p>
             </div>
@@ -98,7 +98,7 @@
             <img src="images\up.svg">
           </div>
           <div class="ranking-bar">
-            <div class='progress-bar' ng-repeat="item in appData">
+            <div class='progress-bar' ng-repeat="item in appData track by $index">
               <div id="bar1-{{item.id+1}}"></div>
               <p>{{item.app}}</p>
             </div>
@@ -132,13 +132,13 @@
         <div class="col-9 vertical-border-right">
 
           <div style="float:left;width:100%">
-              <div class="graph-legend" ng-repeat="item in pieChartData" id="legend2-2">
+              <div class="graph-legend" ng-repeat="item in pieChartData track by $index" id="legend2-2">
               <div class="legend-circle-{{item.id}}"></div>
               <p>{{item.key}}</p>
             </div>
           </div>
 
-        <div class="big-number circle-stat" ng-repeat="item in pieChartData">
+        <div class="big-number circle-stat" ng-repeat="item in pieChartData track by $index">
           <h2>{{item.key}}</h2>
           <p>{{item.y}}</p>
           <h3>Gb</h3>
@@ -153,7 +153,7 @@
 
           <div style="height:165px;">
               <br>
-              <div ng-repeat="item in ipData">
+              <div ng-repeat="item in ipData track by $index">
               <p>{{item.IP}} {{item.description}}</p>
             </div>
           </div>
@@ -162,13 +162,13 @@
         <div class="col-9 vertical-border-right">
 
         <div style="float:left;width:100%">
-              <div class="graph-legend wide" ng-repeat="item in ipData" id="legend2-2">
+              <div class="graph-legend wide" ng-repeat="item in ipData track by $index" id="legend2-2">
               <div class="legend-circle-{{item.id}}"></div>
               <p>{{item.IP}}</p>
             </div>
           </div>
 
-        <div class="big-number circle-stat" ng-repeat="item in ipData">
+        <div class="big-number circle-stat" ng-repeat="item in ipData track by $index">
           <div style="height:140px;">
             <radar-chart val="item.content" initcolor="radarColorFunction(item.id)">
             </radar-chart>

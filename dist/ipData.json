@@ -1,0 +1,67 @@
+[
+    {
+        "id": 0,
+        "IP": "192.168.1.5",
+        "flux": 1500,
+        "description": "主要进行 游戏，视频",
+        "content": [[
+                { "axis": "游戏", "value": 400},
+                { "axis": "社交", "value": 520},
+                { "axis": "视频", "value": 220},
+                { "axis": "网页", "value": 300},
+                { "axis": "IM", "value": 120}
+            ]]
+        },
+    {
+        "id": 1,
+        "IP": "192.168.1.10",
+        "flux": 1000,
+        "description": "主要进行 游戏，视频",
+        "content": [[
+                { "axis": "游戏", "value": 300},
+                { "axis": "社交", "value": 500},
+                { "axis": "视频", "value": 200},
+                { "axis": "网页", "value": 100},
+                { "axis": "IM", "value": 120}
+            ]]
+        },
+    {
+        "id": 2,
+        "IP": "192.168.1.3",
+        "flux": 800,
+        "description": "主要进行 游戏，视频",
+        "content": [[
+                { "axis": "游戏", "value": 100},
+                { "axis": "社交", "value": 320},
+                { "axis": "视频", "value": 220},
+                { "axis": "网页", "value": 100},
+                { "axis": "IM", "value": 20}
+            ]]
+        },
+    {
+        "id": 3,
+        "IP": "192.168.1.2",
+        "flux": 1500,
+        "description": "主要进行 游戏，视频",
+        "content": [[
+                { "axis": "游戏", "value": 200},
+                { "axis": "社交", "value": 320},
+                { "axis": "视频", "value": 120},
+                { "axis": "网页", "value": 30},
+                { "axis": "IM", "value": 150}
+            ]]
+        },
+    {
+        "id": 4,
+        "IP": "192.168.1.33",
+        "flux": 1500,
+        "description": "主要进行 社交，游戏",
+        "content": [[
+                { "axis": "游戏", "value": 40},
+                { "axis": "社交", "value": 120},
+                { "axis": "视频", "value": 20},
+                { "axis": "网页", "value": 30},
+                { "axis": "IM", "value": 20}
+            ]]
+    }
+]

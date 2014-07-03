@@ -1,2 +1,2 @@
 ### TBD
-* try to import function not single value
+* check the sample.pdf to view the export effect
